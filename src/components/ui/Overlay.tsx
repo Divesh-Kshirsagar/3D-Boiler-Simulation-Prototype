@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSimulationStore } from '../../stores/simulationStore';
-import { AlertTriangle, Gauge, Droplet, Flame, Activity } from 'lucide-react';
+import { AlertTriangle, Gauge, Droplet, Flame, Activity, Github } from 'lucide-react';
 import clsx from 'clsx';
 
 
@@ -18,10 +18,20 @@ export const Overlay: React.FC = () => {
       <div className="flex justify-between items-start pointer-events-auto">
         <div>
            <h1 className="text-2xl font-bold tracking-widest border-b-2 border-cyan-500 pb-1 mb-2">B.I.M.C.S | Digital Twin</h1>
-           <div className="text-xs text-cyan-600 flex gap-4">
+           <div className="text-xs text-cyan-600 flex gap-4 items-center">
              <span>• LIVE RUN</span>
              <span>DB: Connected</span>
              <span>TICK: 60hz</span>
+             <a 
+               href="https://github.com/Divesh-Kshirsagar/3D-Boiler-Simulation-Prototype.git" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="flex items-center gap-2 bg-gray-900/80 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-950/50 px-3 py-1 rounded transition-all ml-2 group"
+               title="View Source on GitHub"
+             >
+               <Github size={14} className="text-cyan-600 group-hover:text-cyan-300 transition-colors"/>
+               <span className="text-[10px] font-bold text-cyan-600 group-hover:text-cyan-300 transition-colors tracking-wider">SOURCE</span>
+             </a>
            </div>
         </div>
         
